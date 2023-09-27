@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+    background-color: #111;
+
+}
+.contenedor{
+    height: 200px;
+    width: 200px;
+    perspective: 1000px;
+    margin: 170px auto;
+    transform:scale(.9)rotateX(-10deg);
+    transform-style: preserve-3d; 
+  
+}
+.contenedor .box{
+    animation: rotar 50s infinite linear;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+   transition: 2s;
+  
+}
+.elementos{
+    height: 200px;
+    width: 150px;
+    position: absolute;
+    box-shadow: 0 0 10px #fff;
+}
+:root{
+    --transladacion:translateZ(250px);
+}
+.elementos:nth-child(1){
+    transform: rotateY(0deg) var(--transladacion);
+}
+.elementos:nth-child(2){
+    transform: rotateY(45deg) var(--transladacion);
+}
+.elementos:nth-child(3){
+    transform: rotateY(90deg) var(--transladacion);
+}
+.elementos:nth-child(4){
+    transform: rotateY(135deg) var(--transladacion);
+}
+.elementos:nth-child(5){
+    transform: rotateY(180deg) var(--transladacion);
+}
+.elementos:nth-child(6){
+    transform: rotateY(225deg) var(--transladacion);
+}
+.elementos:nth-child(7){
+    transform: rotateY(270deg) var(--transladacion);
+
+}
+.elementos:nth-child(8){
+    transform: rotateY(315deg) var(--transladacion);
+
+}
+.elementos:nth-child(9){
+    transform: rotateY(360deg) var(--transladacion);
+    
+}
+.elementos img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
+    position: absolute;
+    backface-visibility: hidden;
+    
+}
+.elementos img:nth-child(2){
+    transform: rotateY(180deg)
+}
+.imagen2:nth-child(1){
+    animation: rotar2 50s
+}
+.piso{
+    height: 43em;
+    width:43em;
+    transform: rotateX(90deg) translateX(-280px) translateY(40px)translateZ(140px);
+     background: -webkit-radial-gradient(center center, farthest-side , #9993, transparent);
+    border-radius: 50%;
+    
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titulo{
+    height: 200px;
+    width: 300px;
+    flex-direction: column;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.7em;
+}
+.titulo p{
+    margin: 0;
+    padding: 5px;
+}
+
+@keyframes rotar{
+   
+    to{
+        transform: rotateY(-360deg) ;
+    }
+}
+.imagenes{
+    height: 200px;
+    width: 150px;
+    transition: 2s
+        ;
+    transform-style: preserve-3d;
+}
+
+.house{
+            background-color: rgb(118, 122, 122);
+            transition: background-color 1.3s;
+            margin-left: 50px;
+        }
+        .house:hover{
+            background-color: rgba(162, 130, 130, 0.695);
+        }
+    </style>
+</head>
+<body>
+    <h1 style="display: flex; justify-content: center; align-items: center; text-shadow: 0px 0px 10px white; color: #fff;">VENTAS</h1>
+    <div class="contenedor">
+        <div class="box" id="box">
+            <div class="elementos">
+               <div class="imagenes">
+                <img src="venta/venta1.jpeg" alt="">
+                <img src="venta/venta1.jpeg">
+               </div>
+            </div>
+            <div class="elementos">
+               <div class="imagenes">
+                    <img src="venta/venta2.png" alt="">
+                 <img src="venta/venta2.png" alt="">
+               </div>
+            </div>
+            <div class="elementos">
+               <div class="imagenes">
+                    <img src="venta/venta3.webp" alt="">
+                 <img  src="venta/venta3.webp" alt="">
+               </div>
+            </div>
+            <div class="elementos">
+                 <div class="imagenes">
+                     <img  src="" alt=""><img src="venta/venta4.png" alt="">
+                 <img  src="venta/venta4.png" alt="">
+                 </div>
+            </div>
+            <div class="elementos">
+              <div class="imagenes">
+                   <img src="venta/venta5.jpeg" alt=""> 
+                   <img src="venta/venta5.jpeg" alt="">
+              </div>
+               
+            </div>
+            <div class="elementos">
+               <div class="imagenes">
+                    <img src="venta/venta6.png" alt="">
+                    <img src="venta/venta6.png" alt="">
+               </div>
+            </div>
+            <div class="elementos">
+               <div class="imagenes">
+                   <img src="venta/venta7.jpeg" alt=""> 
+                   <img src="venta/venta7.jpeg" alt="">
+               </div>
+            </div>
+            <div class="elementos">
+             <div class="imagenes">
+                   <img src="venta/venta8.jpeg" alt=""> 
+                   <img src="venta/venta8.jpeg" alt="">
+             </div>
+            </div>
+            <div class="piso flex">
+              <div class="titulo flex">
+                <p style="text-shadow: 0px 0px 10px blue; color: blue;">TELCEL<p>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="display: flex; justify-content: space-around;">
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: white;">
+            <a href="venIngresar.html"><img src="img/ingresar2.jpeg" alt="" width="500px"></a>
+            <h1>Ingresar datos</h1>
+        </div>
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: white;">
+            <a href="venTabla.html"><img src="img/php.png" alt="" height="270px"></a>
+            <h1>Revisar tabla</h1>
+        </div>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; font-size: 50px;">
+        <a href="index.html" ><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" class="house"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg></a>
+    </div>
+</body>
+</html>
